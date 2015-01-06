@@ -12,3 +12,7 @@ alias ls 'ls -bFC --color'
 set path = ( /bin /usr/bin /usr/sbin )
 
 echo "Cygwin tcsh login shell\n"
+
+#alias sa  'eval ~/.sagent'
+alias sa  'set command = `~/.sagent`; eval $command; echo "EXECUTED : $command" '
+alias sk  'ssh-agent -k'

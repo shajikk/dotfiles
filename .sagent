@@ -1,0 +1,13 @@
+#!/bin/env perl
+use strict;
+my $command = `ssh-agent -s`;
+my $csh_cmd  = "";
+
+if ($command =~ /SSH_AUTH_SOCK=(.+?);/) {
+  $csh_cmd .= sprintf("setenv SSH_AUTH_SOCK  $1;");
+}
+if ($command =~ /SSH_AGENT_PID=(.+?);/) {
+  $csh_cmd .= sprintf("setenv SSH_AGENT_PID $1");
+}
+
+print $csh_cmd;
