@@ -63,8 +63,21 @@ syntax on
 filetype on
 au BufNewFile,BufRead *.mq4 set filetype=cpp
 
-:e ++ff=dos
+
+function ToggleDOSUNIX()
+  if !exists("s:dos_unix")
+    let s:dos_unix=1
+    set wrap
+    :e ++ff=dos
+  else
+    unlet s:dos_unix
+    :e ++ff=unix
+  endif
+endfunction
+
+map <F7> :call ToggleDOSUNIX()<ENTER>
 
 set backupdir=~/vimtmp,.
 set directory=~/vimtmp,.
 
+set noai
