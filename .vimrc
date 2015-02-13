@@ -81,3 +81,27 @@ set backupdir=~/vimtmp,.
 set directory=~/vimtmp,.
 
 set noai
+
+set foldmethod=syntax
+
+function GlobalFoldToggle()
+  if !exists("s:all_fold")
+    let s:all_fold=1
+    normal  zR
+  else
+    unlet s:all_fold
+    normal  zM
+  endif
+endfunction
+map <F11> :call GlobalFoldToggle()<ENTER>
+
+function LocalFoldToggle()
+  if !exists("s:l_fold")
+    let s:l_fold=1
+    normal  zo
+  else
+    unlet s:l_fold
+    normal  zc
+  endif
+endfunction
+map <F12> :call LocalFoldToggle()<ENTER>
