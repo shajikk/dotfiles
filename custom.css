@@ -1,0 +1,119 @@
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+/* https://github.com/dreampulse/computer-modern-web-font */
+/*@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css');*/
+
+.container {
+   width:80% !important;
+}
+
+div.text_cell {
+    max-width: 100% !important;
+}
+
+/* Remove line numbers, gutter */
+.CodeMirror-linenumber {
+   color: blue;
+   font-weight: bold;
+   display : none;
+}
+
+/* Remove line numbers, gutter */
+.CodeMirror-gutter {
+    background: #f4f1fa;
+   display : none;
+}
+
+.CodeMirror-cursor {
+  border-left: 3px solid red;
+}
+
+/* Stuff below */
+
+.CodeMirror pre {
+    font-size: 15px;
+    line-height: 125%;
+}
+
+.cm-s-ipython span.cm-comment {
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+}
+
+div.input_area {  
+    border-color: rgba(0,0,0,0.10);
+    background: #f4f1fa;
+}
+
+.edit_mode div.cell.selected div.input_area  {
+    border:  2px ridge #7f00ff;
+    -webkit-box-shadow: 3px 3px 3px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 3px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 3px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+
+div.input_area:hover {  
+    border:  2px ridge rgba(0,0,0,0.3);
+    -webkit-box-shadow: 3px 3px 3px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 3px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 3px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+div.output_area {  
+    font-size: 15px;
+    line-height: 145%;
+}
+
+
+div.text_cell {  
+    max-width: 105ex; /* instead of 100%, */
+    //font-family: "Computer Modern Typewriter";
+    //font-family: "Computer Modern Serif";
+    //font-family: "Computer Modern Sans";
+    //font-family: "Computer Modern Concrete";
+    //font-family: 'Source Code Pro', Consolas, monocco, monospace;
+}
+
+div.text_cell_render {  
+    font-size: 12pt;
+    line-height: 145%; /* added for some line spacing of text. */
+}
+
+div.text_cell_render h1 {  
+    font-size: 24pt;
+    text-decoration: underline;
+}
+
+div.text_cell_render h2 {  font-size: 18pt; }
+div.text_cell_render h3 {  font-size: 14pt; }
+div.toc-header {  font-size: 18pt; }
+
+div.cell.selected, div.cell.selected.jupyter-soft-selected {
+    border-color: white;
+}
+
+div.cell.selected:before, div.cell.selected.jupyter-soft-selected:before {
+    background:blue;
+}
+
+.edit_mode div.cell.selected {
+    border-color: white;
+}
+
+.edit_mode div.cell.selected:before {
+    background: white;
+}
+
+/*
+.MathJax span:hover {
+    color:blue;
+}
+*/
+
